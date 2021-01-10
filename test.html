@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd%22%3E
+<html lang=de>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>BaReCo Image Converter</title>
+        <script>
+            let canvas;
+            let input;
+
+            window.addEventListener('load',initilize)
+            function initilize() {
+                canvas=document.getElementById('image_canvas');
+                input = document.getElementById('file_input');
+                input.addEventListener('change', file_choosen);
+                // input.addEventListener('click', () => input.value = null);
+                console.log("loaded");
+                file_choosen();
+            }
+
+            async function file_choosen(){
+                await Promise.resolve();
+                var image = new Image();
+                console.log(file_input.files[0]);
+                var blob_url = URL.createObjectURL(file_input.files[0]);
+                image.onload = ()=>{
+                    var ctx = canvas.getContext('2d');
+                    ctx.clearRect(0,0,canvas.width,canvas.height);
+                    ctx.drawImage(image, 0, 0);
+                    console.log("drawn");
+                    URL.revokeObjectURL(blob_url);
+                }
+                image.src = blob_url;
+            }
+        </script>
+    </head>
+    <body>
+        <input id="file_input" type="file" accept="image/*""></input>
+        <canvas id="image_canvas">Your Browser does not support HTML5 Canvas!</canvas>
+    </body>
+</html>

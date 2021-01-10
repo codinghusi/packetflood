@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Object">
+        <g id="Top" transform="matrix(2.47876,-1.23938,4.29017,2.14508,-524.969,-177.711)">
+            <rect x="-71.554" y="171.73" width="71.554" height="57.243" style="fill:rgb(92,84,76);"/>
+            <path d="M0,171.73L-71.554,171.73L-71.554,228.973L0,228.973L0,171.73ZM-71.103,171.991L-71.103,228.713L-0.451,228.713L-0.451,171.991L-71.103,171.991Z"/>
+        </g>
+        <g id="Name" transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+            <path d="M256,136L216,156L224,160L264,140L256,136Z" style="fill:rgb(145,59,52);"/>
+            <path d="M256,136L216,156L224,160L264,140L256,136ZM217.311,156L224,159.344L262.689,140L256,136.656L217.311,156Z"/>
+            <path d="M224,120L184,140L192,144L208,136L224,144L248,132L224,120ZM224,128L216,132L224,136L232,132L224,128Z" style="fill:rgb(145,59,52);"/>
+            <path d="M224,120L184,140L192,144L208,136L224,144L248,132L224,120ZM224,143.344L246.689,132L224,120.656L185.311,140L192,143.344L207.738,135.476C207.903,135.393 208.097,135.393 208.262,135.476L224,143.344ZM224.262,127.476C224.097,127.393 223.903,127.393 223.738,127.476L215.738,131.476C215.539,131.575 215.414,131.778 215.414,132C215.414,132.222 215.539,132.425 215.738,132.524L223.738,136.524C223.903,136.607 224.097,136.607 224.262,136.524L232.262,132.524C232.461,132.425 232.586,132.222 232.586,132C232.586,131.778 232.461,131.575 232.262,131.476L224.262,127.476ZM224,128L216,132L224,136L232,132L224,128Z"/>
+        </g>
+        <g id="Side" transform="matrix(3.43214,1.71607,5.76902e-17,1.43006,-456.751,-48.0979)">
+            <rect x="143.108" y="57.243" width="71.554" height="57.243" style="fill:rgb(54,49,43);"/>
+            <path d="M214.663,57.243L143.108,57.243L143.108,114.487L214.663,114.487L214.663,57.243ZM143.4,113.705L214.371,113.705L214.371,58.025L143.4,58.025L143.4,113.705Z"/>
+        </g>
+        <g id="Front" transform="matrix(2.47876,-1.23938,-2.32451e-18,1.43006,-252.098,340.743)">
+            <rect x="214.663" y="228.973" width="71.554" height="57.243" style="fill:rgb(71,64,57);"/>
+            <path d="M286.217,228.973L214.663,228.973L214.663,286.217L286.217,286.217L286.217,228.973ZM215.066,229.755L215.066,285.435L285.813,285.435L285.813,229.755L215.066,229.755Z"/>
+        </g>
+        <g id="Top-GPIO" serif:id="Top GPIO" transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+            <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                <rect x="0" y="193.196" width="26.833" height="78.71" style="fill:rgb(35,30,28);"/>
+                <path d="M26.833,193.196L0,193.196L-0,271.906L26.833,271.906L26.833,193.196ZM0.733,193.783L0.733,271.32L26.1,271.32L26.1,193.783L0.733,193.783Z"/>
+            </g>
+            <g id="Pins">
+                <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                    <rect x="8.944" y="200.352" width="8.944" height="7.155" style="fill:rgb(92,84,76);"/>
+                    <path d="M17.889,200.352L8.944,200.352L8.944,207.507L17.889,207.507L17.889,200.352ZM9.677,200.938L9.677,206.921L17.156,206.921L17.156,200.938L9.677,200.938Z"/>
+                </g>
+                <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                    <rect x="8.944" y="228.973" width="8.944" height="7.155" style="fill:rgb(92,84,76);"/>
+                    <path d="M17.889,228.973L8.944,228.973L8.944,236.129L17.889,236.129L17.889,228.973ZM9.677,229.56L9.677,235.542L17.156,235.542L17.156,229.56L9.677,229.56Z"/>
+                </g>
+                <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                    <rect x="8.944" y="243.284" width="8.944" height="7.155" style="fill:rgb(92,84,76);"/>
+                    <path d="M17.889,243.284L8.944,243.284L8.944,250.44L17.889,250.44L17.889,243.284ZM9.677,243.871L9.677,249.853L17.156,249.853L17.156,243.871L9.677,243.871Z"/>
+                </g>
+                <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                    <rect x="8.944" y="257.595" width="8.944" height="7.155" style="fill:rgb(92,84,76);"/>
+                    <path d="M17.889,257.595L8.944,257.595L8.944,264.75L17.889,264.75L17.889,257.595ZM9.677,258.181L9.677,264.164L17.156,264.164L17.156,258.181L9.677,258.181Z"/>
+                </g>
+                <g transform="matrix(0.894427,-0.447214,1.5476,0.773799,-95.285,-47.6425)">
+                    <rect x="8.944" y="216.649" width="8.944" height="5.169" style="fill:rgb(92,84,76);"/>
+                    <path d="M17.889,216.649L8.944,216.649L8.944,221.818L17.889,221.818L17.889,216.649ZM9.677,217.072L9.677,221.394L17.156,221.394L17.156,217.072L9.677,217.072Z"/>
+                </g>
+            </g>
+        </g>
+        <g id="Front-Ports" serif:id="Front Ports" transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+            <g>
+                <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(54,49,43);stroke:black;stroke-width:0.59px;"/>
+                <path d="M288,208L280,204" style="fill:none;stroke:black;stroke-width:0.59px;"/>
+            </g>
+            <g>
+                <g transform="matrix(1,0,0,1,9.72555e-14,16)">
+                    <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(54,49,43);stroke:black;stroke-width:0.59px;"/>
+                </g>
+                <path d="M288,224L280,220" style="fill:none;stroke:black;stroke-width:0.59px;"/>
+            </g>
+            <g>
+                <g transform="matrix(1,0,0,1,32,-16)">
+                    <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(54,49,43);stroke:black;stroke-width:0.59px;"/>
+                </g>
+                <path d="M320,192L312,188" style="fill:none;stroke:black;stroke-width:0.59px;"/>
+            </g>
+            <g>
+                <g transform="matrix(1,0,0,1,32,-5.68656e-13)">
+                    <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(54,49,43);stroke:black;stroke-width:0.59px;"/>
+                </g>
+                <path d="M320,208L312,204" style="fill:none;stroke:black;stroke-width:0.59px;"/>
+            </g>
+            <g>
+                <g transform="matrix(1.34164,-0.67082,-8.32667e-17,1.67705,-176,-96)">
+                    <rect x="375.659" y="314.838" width="17.889" height="14.311" style="fill:rgb(54,49,43);stroke:black;stroke-width:0.49px;"/>
+                </g>
+                <path d="M352,192L328,180" style="fill:none;stroke:black;stroke-width:0.59px;"/>
+            </g>
+        </g>
+        <g id="Side-Ports" serif:id="Side Ports" transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+            <g>
+                <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,-7.10543e-13,16)">
+                    <rect x="143.108" y="85.865" width="35.777" height="7.155" style="fill:rgb(71,64,57);stroke:black;stroke-width:0.46px;"/>
+                </g>
+                <path d="M128,184L136,180" style="fill:rgb(71,64,57);stroke:black;stroke-width:0.59px;"/>
+            </g>
+            <g>
+                <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,-6.32827e-15,16)">
+                    <rect x="205.718" y="85.865" width="8.944" height="7.155" style="fill:rgb(71,64,57);stroke:black;stroke-width:0.46px;"/>
+                </g>
+                <path d="M184,212L192,208" style="fill:none;stroke:black;stroke-width:0.59px;"/>
+            </g>
+        </g>
+    </g>
+    <g id="Light">
+        <g id="Top1" serif:id="Top">
+            <g id="Top-GPIO1" serif:id="Top GPIO" transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+                <g id="GPIO-Pins" serif:id="GPIO Pins">
+                    <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                        <rect x="8.944" y="200.352" width="8.944" height="7.155" style="fill:rgb(38,185,217);"/>
+                    </g>
+                    <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                        <rect x="8.944" y="228.973" width="8.944" height="7.155" style="fill:rgb(38,185,217);"/>
+                    </g>
+                    <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                        <rect x="8.944" y="243.284" width="8.944" height="7.155" style="fill:rgb(38,185,217);"/>
+                    </g>
+                    <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                        <rect x="8.944" y="257.595" width="8.944" height="7.155" style="fill:rgb(38,185,217);"/>
+                    </g>
+                    <g transform="matrix(0.894427,-0.447214,1.5476,0.773799,-95.285,-47.6425)">
+                        <rect x="8.944" y="216.649" width="8.944" height="5.169" style="fill:rgb(38,185,217);"/>
+                    </g>
+                </g>
+            </g>
+            <g id="Name1" serif:id="Name" transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+                <path d="M256,136L216,156L224,160L264,140L256,136Z" style="fill:rgb(195,51,204);"/>
+                <path d="M224,120L184,140L192,144L208,136L224,144L248,132L224,120ZM224,128L216,132L224,136L232,132L224,128Z" style="fill:rgb(195,51,204);"/>
+            </g>
+        </g>
+        <g transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+            <g id="Side1" serif:id="Side">
+                <g id="Ports">
+                    <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,-7.24754e-13,16)">
+                        <rect x="143.108" y="85.865" width="35.777" height="7.155" style="fill:rgb(38,185,217);"/>
+                    </g>
+                    <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,0,16)">
+                        <rect x="205.718" y="85.865" width="8.944" height="7.155" style="fill:rgb(38,185,217);"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1.70544,0,0,1.70544,-156.593,47.4069)">
+            <g id="Front1" serif:id="Front">
+                <g id="Ports1" serif:id="Ports">
+                    <g>
+                        <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(77,200,216);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,9.72555e-14,16)">
+                        <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(77,200,216);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,32,-16)">
+                        <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(77,200,216);"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,32,-5.68656e-13)">
+                        <path d="M264,212L264,220L288,208L288,200L264,212Z" style="fill:rgb(77,200,216);"/>
+                    </g>
+                    <g transform="matrix(1.34164,-0.67082,-8.32667e-17,1.67705,-176,-96)">
+                        <rect x="375.659" y="314.838" width="17.889" height="14.311" style="fill:rgb(77,200,216);"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
