@@ -5,6 +5,12 @@ module.exports = {
         "src": {url: '/'},
     },
     devOptions: {
-        open: 'none'
+        open: 'none',
+    },
+    buildOptions: {
+        sourcemap: true,
+    },
+    packageOptions: {
+        polyfillNode: true
     }
 };

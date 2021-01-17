@@ -1,30 +1,31 @@
-import * as PIXI from 'pixi.js';
+/* import * as PIXI from 'pixi.js';
+
+interface LightMapping {
+    [svg_id: string]: number // in degrees
+}
 
 class TextureLight {
-    constructor(public top: Texture,
-                public front: Texture,
-                public side: Texture) {}
+    constructor(public pixiTexture: PIXI.Texture,
+                public direction: number) {}
 }
 
 class Texture {
     constructor(public base: Texture,
                 public light: TextureLight) {}
 
-    private static loadTexture(name: string): Promise<Texture> {
+    private static loadTexture(name: string, lightMapping: LightMapping): Promise<Texture> {
         return new Promise((resolve, reject) => {
             const obj = document.createElement('object');
             obj.addEventListener('load', () => {
                 const doc = obj.contentDocument;
-                
-                const light = new TextureLight(
-                    new SVG(doc.getElementById('Top')),
-                    new SVG(doc.getElementById('Front')),
-                    new SVG(doc.getElementById('Side')),
-                );
-                const sprite = new Texture(
-                    new SVG(doc.getElementById('Object')),
-                    light
-                );
+                const lights = Object.entries(mapping)
+                    .map(([id, angle]) => ({
+                        element: doc.getElementById(id),
+                        angle
+                    }))
+                    .filter(map => map.angle)
+                    .map(/* map the svgs to pixi textures *//*);
+
                 obj.remove();
                 resolve(sprite);
             });
@@ -65,4 +66,4 @@ function toSVG(part: Element) {
     svg.setAttribute('viewbox', '0 0 500 500');
     svg.innerHTML = part.outerHTML;
     return svg as unknown as SVGElement;
-}
+}*/
