@@ -16,9 +16,12 @@ class ComputerObject extends GameObject{
 
     init() {
         this.sprites.light.filters = [ this.lightBlur ];
+        this.lightBlur.blur = 5;
+        this.sprites.object.width = 1000;
+        this.sprites.object.height = 1000;
 
         setInterval(() => {
-            this.lightBlur.blur = this.toggle ? 5 : 0;
+            this.sprites.light.visible = this.toggle;
             this.toggle = !this.toggle;
         }, 500)
     }

@@ -8,3 +8,5 @@ export function mapObject(obj: any, callback: (key: string, value: any) => any) 
               .map( ([key, value]) => ([key, callback(key, value)]) )
     );
 }
+
+export type HTMLSVGElement = SVGElement & HTMLElement;

@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import { KeyValue } from './utils';
+import { HTMLSVGElement, KeyValue } from './utils';
 
 async function fetchSvgAsDocument(path: string): Promise<Document> {
     return new Promise((resolve, reject) => {
@@ -19,11 +19,13 @@ function partToSVG(part: Element) {
     if (!part) {
         throw `Can't convert to SVG: part is null`;
     }
-    const svg = document.createElement('svg');
+    const svg = document.createElement('svg') as HTMLSVGElement;
     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     svg.setAttribute('viewbox', '0 0 500 500');
+    svg.setAttribute('width', '500');
+    svg.setAttribute('height', '500');
     svg.innerHTML = part.outerHTML;
-    return svg as unknown as SVGElement;
+    return svg;
 }
 
 function getObjectOfDocument(doc: XMLDocument) {
@@ -34,16 +36,12 @@ function getLightOfDocument(doc: XMLDocument) {
     return partToSVG(doc.getElementById('Light'));
 }
 
-function svgDataURL(svg: SVGElement) {
+function svgDataURL(svg: HTMLSVGElement) {
     return `data:image/svg+xml;base64,${btoa(svg.outerHTML)}`;
 }
 
-function getTexture(svg: SVGElement) {
-    const img = new Image();
-    img.src = svgDataURL(svg);
-    document.body.appendChild(img);
-    const texture = new PIXI.Texture(new PIXI.BaseTexture(img));
-    // document.body.removeChild(img);
+function getTexture(svg: HTMLSVGElement) {
+    const texture = new PIXI.Texture(new PIXI.BaseTexture(svgDataURL(svg)));
     return texture;
 }
 
