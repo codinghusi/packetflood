@@ -38,19 +38,7 @@ function EmitChanges(eventName = 'property-change'): PropertyDecorator {
     }
 }
 
-export abstract class GameObject extends EventEmitter {
-    @EmitChanges()
-    x: number;
-
-    @EmitChanges()
-    y: number;
-
-    @EmitChanges()
-    angle: number;
-
-    @EmitChanges()
-    alpha: number;
-
+export abstract class GameObject extends PIXI.Container {
     // TODO: checkout PIXI.Sprite.children
     protected sprites: KeyValue<PIXI.Sprite> = {}
     protected engine: Engine;
@@ -59,12 +47,6 @@ export abstract class GameObject extends EventEmitter {
 
     constructor(public id: string) {
         super();
-
-        // Apply all transforms to the sprites if one variable changes
-        this.on('property-change', ({key, beforeValue, afterValue}) => {
-            Object.values(this.sprites)
-                  .forEach((sprite: any) => sprite[key] += afterValue - beforeValue);
-        });
     
         // Get all sprites and data together
         this.engine = Reflect.getMetadata(engineSymbol, this.constructor) as Engine;
@@ -74,8 +56,9 @@ export abstract class GameObject extends EventEmitter {
             return new PIXI.Sprite(texture);
         });
 
-        // Add all Sprites to the stage
-        Object.values(this.sprites).forEach(sprite => this.engine.app.stage.addChild(sprite));
+        // Add all Sprites to this container
+        Object.values(this.sprites).forEach(sprite => this.addChild(sprite));
+        this.engine.app.stage.addChild(this);
         
         const self = this;
         Promise.resolve().then(() => self.init.call(self) );

@@ -19,7 +19,7 @@ export class Engine {
         });
 
         // Running the PIXI App
-        this.app.renderer.backgroundColor = 0xdddddd;
+        this.app.renderer.backgroundColor = 0xffffff;
         document.body.appendChild(this.app.view);
     }
 
