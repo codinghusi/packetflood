@@ -41,11 +41,13 @@ function svgDataURL(svg: SVGElement) {
 function getTexture(svg: SVGElement) {
     const img = new Image();
     img.src = svgDataURL(svg);
+    document.body.appendChild(img);
     const texture = new PIXI.Texture(new PIXI.BaseTexture(img));
+    // document.body.removeChild(img);
     return texture;
 }
 
-class Resource {
+export class Resource {
     constructor(public name: string,
                 public group: string,
                 public data: any,
@@ -60,7 +62,7 @@ function collectResourcesByGroup(groupName: string) {
     return resources.filter(resource => resource.group === groupName);
 }
 
-export async function loadResource(id: string, data: any, path: string) {
+export async function loadResource(id: string, group: string, data: any, path: string) {
     const doc = await fetchSvgAsDocument(path);
     const lightSVG = partToSVG(getLightOfDocument(doc));
     const objectSVG = partToSVG(getObjectOfDocument(doc));
@@ -68,8 +70,8 @@ export async function loadResource(id: string, data: any, path: string) {
     const light = getTexture(lightSVG);
     const object = getTexture(objectSVG);
 
-    const resource = new Resource(id, data, {
-        light, object
+    const resource = new Resource(id, group, data, {
+        object, light
     });
     
     resources.push(resource);
