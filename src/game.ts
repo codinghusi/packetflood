@@ -17,16 +17,23 @@ class ComputerObject extends GameObject{
         setInterval(() => {
             this.lighting.enabled = this.toggle;
             this.toggle = !this.toggle;
-        }, 500)
+        }, 100);
     }
 
     @Event.Tick
     step() {
         this.x += 1;
     }
+
+    @Event.On('connection')
+    onConnection(whatHappend: string) {
+        if (whatHappend === 'lost') {
+            console.log('internet connection lost!');
+        }
+    }
 }
 
 
 game.loaded().then(async () => {
     const pi = new ComputerObject('rpi-v4');
-})
+});

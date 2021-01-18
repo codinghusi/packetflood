@@ -54,6 +54,10 @@ export namespace Event {
     
     export const Init = eventHandler(target => target.events, 'init');
     export const Tick = eventHandler(target => target.engine, 'tick');
+    
+    export function On(eventName: string) {
+        return eventHandler(target => target.events, eventName);
+    }
 }
 
 export class ObjectLight {
