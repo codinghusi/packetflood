@@ -1,6 +1,7 @@
 import { Engine } from "./engine";
 import { GameObject } from "./object-loader";
 import * as PIXI from 'pixi.js';
+import { Event } from './object-loader';
 
 const game = new Engine('/res/resources.json');
 
@@ -14,16 +15,20 @@ class ComputerObject extends GameObject{
         super(id);
     }
 
+    @Event.Init
     init() {
         this.sprites.light.filters = [ this.lightBlur ];
         this.lightBlur.blur = 5;
-        // this.width = 1000;
-        // this.height = 1000;
-
+        
         setInterval(() => {
             this.sprites.light.visible = this.toggle;
             this.toggle = !this.toggle;
         }, 500)
+    }
+
+    @Event.Tick
+    step() {
+        this.x += 1;
     }
 }
 

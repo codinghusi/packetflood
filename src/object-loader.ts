@@ -38,16 +38,34 @@ function EmitChanges(eventName = 'property-change'): PropertyDecorator {
     }
 }
 
+export namespace Event {
+    export const symbol = Symbol('events');
+    export type EventHandler<T extends GameObject> = (target: T) => void;
+    // FIXME: typing any to EventEmitter (currently fails)
+    function eventHandler<T extends GameObject>(eventEmitter: (target: T) => any, eventName: string) {
+        return (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
+            const setMyEvent = (target: T) => eventEmitter(target).on(eventName, () => (target as any)[propertyKey].call(target));
+            const eventHandlers = Reflect.getMetadata(symbol, target) ?? [];
+            eventHandlers.push(setMyEvent);
+            Reflect.defineMetadata(symbol, eventHandlers, target);
+        }
+    }
+
+    export const Init = eventHandler(target => target.events, 'init');
+    export const Tick = eventHandler(target => target.engine, 'tick');
+}
+
 export abstract class GameObject extends PIXI.Container {
     // TODO: checkout PIXI.Sprite.children
     protected sprites: KeyValue<PIXI.Sprite> = {}
-    protected engine: Engine;
+    public engine: Engine;
     protected data: any;
+    public events = new EventEmitter();
 
 
-    constructor(public id: string) {
+    constructor(public id: string) {  
         super();
-    
+
         // Get all sprites and data together
         this.engine = Reflect.getMetadata(engineSymbol, this.constructor) as Engine;
         const resource = this.engine.getResource(this.id);
@@ -59,12 +77,13 @@ export abstract class GameObject extends PIXI.Container {
         // Add all Sprites to this container
         Object.values(this.sprites).forEach(sprite => this.addChild(sprite));
         this.engine.app.stage.addChild(this);
+
+        // Apply all events
+        const eventHandlers: Event.EventHandler<this>[] = Reflect.getMetadata(Event.symbol, this) ?? [];
+        eventHandlers.forEach(handler => handler(this));
         
         const self = this;
-        Promise.resolve().then(() => self.init.call(self) );
+        Promise.resolve().then(() => self.events.emit('init'));
     }
     
-    init() {
-
-    }
 }
