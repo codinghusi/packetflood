@@ -9,15 +9,13 @@ const game = new Engine('/res/resources.json');
 @game.group('computer')
 class ComputerObject extends GameObject{
     toggle = false;
-    lightBlur = new PIXI.filters.BlurFilter();
-    
+
     @Event.Init
     init() {
-        this.sprites.light.filters = [ this.lightBlur ];
-        this.lightBlur.blur = 5;
+        this.lighting.intensity = 5;
 
         setInterval(() => {
-            this.sprites.light.visible = this.toggle;
+            this.lighting.enabled = this.toggle;
             this.toggle = !this.toggle;
         }, 500)
     }

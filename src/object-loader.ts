@@ -38,6 +38,7 @@ function EmitChanges(eventName = 'property-change'): PropertyDecorator {
     }
 }
 
+
 export namespace Event {
     export const symbol = Symbol('events');
     export type EventHandler<T extends GameObject> = (target: T) => void;
@@ -50,9 +51,37 @@ export namespace Event {
             Reflect.defineMetadata(symbol, eventHandlers, target);
         }
     }
-
+    
     export const Init = eventHandler(target => target.events, 'init');
     export const Tick = eventHandler(target => target.engine, 'tick');
+}
+
+export class ObjectLight {
+    blurFilter = new PIXI.filters.BlurFilter();
+
+    get intensity() {
+        return this.blurFilter.blur;
+    }
+
+    set intensity(value: number) {
+        this.blurFilter.blur = value;
+    }
+
+    get enabled() {
+        return this.sprite.visible;
+    }
+
+    set enabled(value: boolean) {
+        this.sprite.visible = value;
+    }
+
+    constructor(public sprite: PIXI.Sprite,
+                intensity: number,
+                enabled: boolean) {
+        this.sprite.filters = [ this.blurFilter ];
+        this.intensity = intensity;
+        this.enabled = enabled;
+    }
 }
 
 export abstract class GameObject extends PIXI.Container {
@@ -61,6 +90,7 @@ export abstract class GameObject extends PIXI.Container {
     public engine: Engine;
     protected data: any;
     public events = new EventEmitter();
+    protected lighting: ObjectLight;
 
 
     constructor(public id: string) {  
@@ -77,6 +107,11 @@ export abstract class GameObject extends PIXI.Container {
         // Add all Sprites to this container
         Object.values(this.sprites).forEach(sprite => this.addChild(sprite));
         this.engine.app.stage.addChild(this);
+
+        // Handle lights
+        if (this.sprites.light) {
+            this.lighting = new ObjectLight(this.sprites.light, 5, false);
+        }
 
         // Apply all events
         const eventHandlers: Event.EventHandler<this>[] = Reflect.getMetadata(Event.symbol, this) ?? [];
