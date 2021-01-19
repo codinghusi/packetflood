@@ -2,6 +2,7 @@ import Events from 'events';
 import { Engine, engineSymbol } from './engine';
 import { loadResource, Resource } from "./resource-loader";
 import { KeyValue, mapObject } from './utils';
+import { WorldInstance } from './world';
 import * as PIXI from 'pixi.js';
 
 // Fix for Snowpack
@@ -95,6 +96,7 @@ export abstract class GameObject extends PIXI.Container {
     protected data: any;
     public events = new EventEmitter();
     protected lighting: ObjectLight;
+    protected world: WorldInstance;
 
 
     constructor(public id: string) {  
@@ -116,6 +118,13 @@ export abstract class GameObject extends PIXI.Container {
         if (this.sprites.light) {
             this.lighting = new ObjectLight(this.sprites.light, 5, false);
         }
+
+        // World
+        this.world = new WorldInstance(this.engine.worldConfig, this);
+        this.world.width = 1;
+        this.world.height = 1;
+
+        console.log(this.width);
 
         // Apply all events
         const eventHandlers: Event.EventHandler<this>[] = Reflect.getMetadata(Event.symbol, this) ?? [];

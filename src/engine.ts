@@ -4,6 +4,7 @@ import { loadResourcesFromJSON } from "./object-loader";
 import { Resource } from "./resource-loader";
 import { KeyValue } from './utils';
 import Events from "events";
+import { WorldConfig } from "./world";
 const { EventEmitter } = Events;
 
 export const engineSymbol = Symbol();
@@ -13,10 +14,16 @@ export class Engine extends EventEmitter {
     protected loadingPromise: Promise<void>;
     protected objects = new Map<Function, string>();
     public app = new PIXI.Application();
+    public worldConfig: WorldConfig;
 
 
     constructor(protected resourcePath: string) {
         super();
+
+        this.worldConfig = {
+            blockSize: 100,
+            imageSize: 500
+        };
 
         // Loading Resources
         const self = this;

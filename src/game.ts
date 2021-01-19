@@ -7,7 +7,7 @@ const game = new Engine('/res/resources.json');
 
 
 @game.group('computer')
-class ComputerObject extends GameObject{
+class ComputerObject extends GameObject {
     toggle = false;
 
     @Event.Init
@@ -17,12 +17,13 @@ class ComputerObject extends GameObject{
         setInterval(() => {
             this.lighting.enabled = this.toggle;
             this.toggle = !this.toggle;
-        }, 100);
+
+            this.world.x += 1;
+        }, 500);
     }
 
     @Event.Tick
     step() {
-        this.x += 1;
     }
 
     @Event.On('connection')
