@@ -1,9 +1,8 @@
-import { GameObject } from './object-loader';
+import { GameObject } from './gameobject/game-object';
 import { Vec2, Vec3 } from './vectors';
 
 export interface WorldConfig {
-    worldWidth: number;
-    worldHeight: number;
+    worldSize: Vec2;
     blockSize: number;
     imageSize: number;
 }
@@ -68,10 +67,11 @@ export class WorldInstance {
 
 
     private updateCoordinates() {
-        const xOffset = this.config.worldWidth / 2 - this.y + this.rotationOffset.x + 1;
+        const xOffset = this.config.worldSize.x / 2 - this.y + this.rotationOffset.x + 1;
         const yOffset = -this.z * 2 + this.x + this.rotationOffset.y + 1;
         this.gameObject.x = this.scaleUpCoordinates(this.x, xOffset, 1/2);
         this.gameObject.y = this.scaleUpCoordinates(this.y, yOffset, 1/4);
+        // Depth
         this.gameObject.zIndex = (this.y + this.z);
     }
 

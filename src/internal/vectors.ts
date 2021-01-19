@@ -12,6 +12,14 @@ export class Vec2 {
         this.x = 0;
         this.y = 0;
     }
+
+    get width() {
+        return this.x;
+    }
+
+    get height() {
+        return this.y;
+    }
 }
 
 export class Vec3 {

@@ -1,31 +1,39 @@
 import "reflect-metadata";
 import * as PIXI from 'pixi.js';
-import { GameObject, GameObjectConstructor, loadResourcesFromJSON } from "./object-loader";
+import { loadResourcesFromJSON } from "./gameobject/resources-from-json";
 import { Resource } from "./resource-loader";
 import { KeyValue } from './utils';
 import Events from "events";
 import { WorldConfig } from "./world";
+import { Vec2 } from "./vectors";
+import { GameObjectConstructor, GameObject } from "./gameobject/game-object";
 const { EventEmitter } = Events;
 
 export const engineSymbol = Symbol();
 
 export class Engine extends EventEmitter {
     protected loadingPromise: Promise<void>;
-    public app = new PIXI.Application();
+    public app: PIXI.Application;
     public resources: KeyValue<Resource>;
     public worldConfig: WorldConfig;
     protected objects = new Map<string, GameObjectConstructor>();
     protected defaultObject = class extends GameObject {}
 
-    constructor(protected resourcePath: string) {
+    constructor(protected resourcePath: string, worldSize: Vec2, blockSize: number) {
         super();
 
+        // Config
         this.worldConfig = {
-            worldWidth: 3,
-            worldHeight: 3,
-            blockSize: 200,
+            worldSize,
+            blockSize,
             imageSize: 500,
         };
+
+        // Creating the app
+        this.app = new PIXI.Application({
+            width: worldSize.width * blockSize + 200,
+            height: worldSize.height * blockSize + 200
+        });
 
         // Loading Resources
         const self = this;
@@ -67,7 +75,7 @@ export class Engine extends EventEmitter {
         }
     }
 
-    createObject(id: string, x: number, y: number, z = 0) {
+    createInstance(id: string, x: number, y: number, z = 0) {
         const resource = this.getResource(id);
         if (!resource) {
             throw `Couldn't load resource '${id}'`;
@@ -82,7 +90,6 @@ export class Engine extends EventEmitter {
     }
 
     getResource(id: string) {
-        console.log(this.resources);
         return this.resources[id];
     }
 
