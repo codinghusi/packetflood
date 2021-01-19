@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Object">
+        <g id="Ground">
+            <g id="Keyboard-Case" serif:id="Keyboard Case" transform="matrix(0.741097,-0.370548,0.442013,0.221007,2.50897,371.769)">
+                <rect x="35.777" y="42.933" width="313.05" height="307.683" style="fill:rgb(92,84,76);stroke:black;stroke-width:1.19px;"/>
+            </g>
+            <g id="Touchpad" transform="matrix(0.521749,-0.260875,1.49071,0.745356,-359.333,-89.6667)">
+                <rect x="-295.161" y="508.035" width="107.331" height="21.466" style="fill:rgb(71,64,57);stroke:black;stroke-width:0.68px;"/>
+            </g>
+            <g id="Keyboard-Ground" serif:id="Keyboard Ground" transform="matrix(0.638877,-0.319438,0.260008,0.130004,37.9801,369.847)">
+                <rect x="35.777" y="42.933" width="313.05" height="307.683" style="fill:rgb(71,64,57);stroke:black;stroke-width:1.54px;"/>
+            </g>
+        </g>
+        <g id="Keyboard">
+            <path id="Arrows" d="M304,304L312,308L304,312L312,316L336,304L328,300L320,304L312,300L304,304Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+            <g id="Main-Keyboard" serif:id="Main Keyboard" transform="matrix(0.971092,-0.485546,1.11803,0.559017,23.0857,-11.5429)">
+                <rect x="-353.299" y="379.237" width="156.525" height="42.933" style="fill:rgb(92,84,76);stroke:black;stroke-width:0.68px;"/>
+            </g>
+            <g id="Other-Other-Keys" serif:id="Other Other Keys" transform="matrix(1.07331,-0.536656,1.34164,0.67082,-57.6,-56)">
+                <rect x="-174.413" y="379.237" width="22.361" height="17.889" style="fill:rgb(92,84,76);stroke:black;stroke-width:0.58px;"/>
+            </g>
+            <g id="Function-Keys" serif:id="Function Keys" transform="matrix(0.800277,-0.400138,1.11803,0.559017,-32,16)">
+                <rect x="-339.882" y="364.926" width="169.941" height="7.155" style="fill:rgb(92,84,76);stroke:black;stroke-width:0.73px;"/>
+            </g>
+            <g id="Other-Keys" serif:id="Other Keys" transform="matrix(2.68328,-1.34164,1.11803,0.559017,272,-136)">
+                <rect x="-160.997" y="364.926" width="8.944" height="7.155" style="fill:rgb(92,84,76);stroke:black;stroke-width:0.36px;"/>
+            </g>
+            <g id="ESC" transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                <rect x="-357.771" y="364.926" width="8.944" height="7.155" style="fill:rgb(92,84,76);stroke:black;stroke-width:0.7px;"/>
+            </g>
+            <g id="Special-Keys" serif:id="Special Keys">
+                <path d="M112,376L136,364L144,368L120,380L112,376Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M152,372L144,368L120,380L128,384L152,372Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M144,376L160,384L144,392L128,384L144,376Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M152,396L192,376L184,372L144,392L152,396Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M192,368L200,372L280,332L272,328L192,368Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M280,324L288,328L304,320L296,316L280,324Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M288,320L280,316L288,312L296,316L288,320Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M280,316L264,308L256,312L248,308L264,300L288,312L280,316Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+                <path d="M232,308L240,312L264,300L256,296L232,308Z" style="fill:rgb(92,84,76);stroke:black;stroke-width:1px;"/>
+            </g>
+        </g>
+        <g id="Display">
+            <g id="Display-Case" serif:id="Display Case" transform="matrix(0.741097,-0.370548,-2.98564e-17,0.494015,21.4857,208.048)">
+                <rect x="35.777" y="42.933" width="313.05" height="307.683" style="fill:rgb(54,49,43);stroke:black;stroke-width:1.88px;"/>
+            </g>
+            <g id="Display1" serif:id="Display" transform="matrix(0.689987,-0.344993,-8.49966e-17,0.442013,31.3143,213.366)">
+                <rect x="35.777" y="42.933" width="313.05" height="307.683" style="fill:rgb(35,30,28);stroke:black;stroke-width:2.03px;"/>
+            </g>
+        </g>
+        <g id="Case-Depth" serif:id="Case Depth">
+            <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,0,0)">
+                <rect x="44.721" y="171.73" width="8.944" height="135.953" style="fill:rgb(35,30,28);stroke:black;stroke-width:0.78px;"/>
+            </g>
+            <g transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                <rect x="-214.663" y="207.507" width="259.384" height="7.155" style="fill:rgb(71,64,57);stroke:black;stroke-width:0.7px;"/>
+            </g>
+            <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,0,0)">
+                <rect x="44.721" y="307.683" width="160.997" height="7.155" style="fill:rgb(35,30,28);stroke:black;stroke-width:0.78px;"/>
+            </g>
+            <g transform="matrix(0.894427,-0.447214,-5.55112e-17,1.11803,0,0)">
+                <rect x="205.718" y="472.258" width="259.384" height="7.155" style="fill:rgb(54,49,43);stroke:black;stroke-width:1.26px;"/>
+            </g>
+        </g>
+    </g>
+    <g id="Light">
+        <g transform="matrix(0.689987,-0.344993,-8.49966e-17,0.442013,31.3143,213.366)">
+            <g id="Front">
+                <rect id="Display2" serif:id="Display" x="35.777" y="42.933" width="313.05" height="307.683" style="fill:rgb(75,155,52);"/>
+            </g>
+        </g>
+        <g id="Top">
+            <path id="Arrows1" serif:id="Arrows" d="M304,304L312,308L304,312L312,316L336,304L328,300L320,304L312,300L304,304Z" style="fill:rgb(195,51,204);fill-opacity:0.61;"/>
+            <g id="Main-Keyboard1" serif:id="Main Keyboard" transform="matrix(0.971092,-0.485546,1.11803,0.559017,23.0857,-11.5429)">
+                <rect x="-353.299" y="379.237" width="156.525" height="42.933" style="fill:rgb(195,51,204);fill-opacity:0.61;"/>
+            </g>
+            <g id="Other-Other-Keys1" serif:id="Other Other Keys" transform="matrix(1.07331,-0.536656,1.34164,0.67082,-57.6,-56)">
+                <rect x="-174.413" y="379.237" width="22.361" height="17.889" style="fill:rgb(195,51,204);fill-opacity:0.61;"/>
+            </g>
+            <g id="Function-Keys1" serif:id="Function Keys" transform="matrix(0.800277,-0.400138,1.11803,0.559017,-32,16)">
+                <rect x="-339.882" y="364.926" width="169.941" height="7.155" style="fill:rgb(195,51,204);fill-opacity:0.61;"/>
+            </g>
+            <g id="Other-Keys1" serif:id="Other Keys" transform="matrix(2.68328,-1.34164,1.11803,0.559017,272,-136)">
+                <rect x="-160.997" y="364.926" width="8.944" height="7.155" style="fill:rgb(195,51,204);fill-opacity:0.61;"/>
+            </g>
+            <g id="ESC1" serif:id="ESC" transform="matrix(0.894427,-0.447214,1.11803,0.559017,0,0)">
+                <rect x="-357.771" y="364.926" width="8.944" height="7.155" style="fill:rgb(195,51,204);fill-opacity:0.61;"/>
+            </g>
+            <g id="Special-Keys1" serif:id="Special Keys">
+                <path d="M112,376L136,364L144,368L120,380L112,376Z" style="fill:none;"/>
+                <path d="M152,372L144,368L120,380L128,384L152,372Z" style="fill:none;"/>
+                <path d="M144,376L160,384L144,392L128,384L144,376Z" style="fill:none;"/>
+                <path d="M152,396L192,376L184,372L144,392L152,396Z" style="fill:none;"/>
+                <path d="M192,368L200,372L280,332L272,328L192,368Z" style="fill:none;"/>
+                <path d="M280,324L288,328L304,320L296,316L280,324Z" style="fill:none;"/>
+                <path d="M288,320L280,316L288,312L296,316L288,320Z" style="fill:none;"/>
+                <path d="M280,316L264,308L256,312L248,308L264,300L288,312L280,316Z" style="fill:none;"/>
+                <path d="M232,308L240,312L264,300L256,296L232,308Z" style="fill:none;"/>
+            </g>
+        </g>
+    </g>
+</svg>

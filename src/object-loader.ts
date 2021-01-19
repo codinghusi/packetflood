@@ -89,6 +89,9 @@ export class ObjectLight {
     }
 }
 
+export type GameObjectConstructor = new (id: string) => GameObject;
+
+
 export abstract class GameObject extends PIXI.Container {
     // TODO: checkout PIXI.Sprite.children
     protected sprites: KeyValue<PIXI.Sprite> = {}
@@ -96,8 +99,7 @@ export abstract class GameObject extends PIXI.Container {
     protected data: any;
     public events = new EventEmitter();
     protected lighting: ObjectLight;
-    protected world: WorldInstance;
-
+    public world: WorldInstance;
 
     constructor(public id: string) {  
         super();
@@ -133,5 +135,5 @@ export abstract class GameObject extends PIXI.Container {
         const self = this;
         Promise.resolve().then(() => self.events.emit('init'));
     }
-    
+
 }

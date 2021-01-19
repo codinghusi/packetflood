@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Object">
+        <g transform="matrix(0.901583,-0.450791,1.10909,0.554545,-1.04805e-13,128)">
+            <rect x="0" y="0" width="279.508" height="223.607" style="fill:rgb(92,84,76);"/>
+        </g>
+        <g transform="matrix(0.0603383,0.0301692,3.55002e-18,1.12256,0.134921,-0.450758)">
+            <rect x="-2.236" y="114.487" width="281.745" height="220.924" style="fill:rgb(71,64,57);"/>
+        </g>
+        <g transform="matrix(0.894427,0.447214,5.57359e-17,1.12256,-2.57299e-17,-0.518219)">
+            <rect x="259.384" y="114.487" width="17.889" height="220.924" style="fill:rgb(71,64,57);"/>
+        </g>
+        <g transform="matrix(0.0429325,-0.0214663,-4.18016e-17,1.12029,476,-239.261)">
+            <rect x="279.508" y="336.752" width="279.508" height="221.371" style="fill:rgb(54,49,43);"/>
+        </g>
+        <g transform="matrix(1.78885,-0.894427,-9.63735e-17,1.9255,-264,315.111)">
+            <rect x="286.217" y="100.176" width="8.944" height="128.798" style="fill:rgb(54,49,43);"/>
+        </g>
+        <g transform="matrix(0.894427,0.447214,5.55112e-17,1.11803,0,0)">
+            <rect x="19.007" y="114.487" width="240.377" height="14.311" style="fill:rgb(71,64,57);"/>
+        </g>
+        <g transform="matrix(0.878735,-0.439368,-5.3597e-17,0.993808,12.4912,37.3099)">
+            <rect x="286.217" y="334.516" width="254.912" height="16.1" style="fill:rgb(54,49,43);"/>
+        </g>
+        <g transform="matrix(2.14286,0,0,1,-19.4286,0)">
+            <path d="M16.533,384L20.267,372L20.267,156L17,151.5L16.533,384Z" style="fill:rgb(54,49,43);"/>
+        </g>
+        <path d="M488,380L480,368L480,152L488,148L488,380Z" style="fill:rgb(35,30,28);"/>
+    </g>
+</svg>

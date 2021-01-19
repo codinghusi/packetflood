@@ -17,7 +17,7 @@ async function fetchSvgAsDocument(path: string): Promise<Document> {
 
 function partToSVG(part: Element) {
     if (!part) {
-        throw `Can't convert to SVG: part is null`;
+        return null;
     }
     const svg = document.createElement('svg') as HTMLSVGElement;
     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -41,6 +41,9 @@ function svgDataURL(svg: HTMLSVGElement) {
 }
 
 function getTexture(svg: HTMLSVGElement) {
+    if (!svg) {
+        return null;
+    }
     const texture = new PIXI.Texture(new PIXI.BaseTexture(svgDataURL(svg)));
     return texture;
 }
@@ -62,6 +65,8 @@ function collectResourcesByGroup(groupName: string) {
 
 export async function loadResource(id: string, group: string, data: any, path: string) {
     const doc = await fetchSvgAsDocument(path);
+
+    // TODO: make these parts more dynamic
     const lightSVG = partToSVG(getLightOfDocument(doc));
     const objectSVG = partToSVG(getObjectOfDocument(doc));
 

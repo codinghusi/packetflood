@@ -1,6 +1,6 @@
 {
-    "objects": {
-        "pi": {
+    "objects": [
+        {
             "id": "rpi-v4",
             "short-name": "PI",
             "long-name": "Raspberry PI v4",
@@ -35,8 +35,26 @@
                     "amount": 1
                 }
             ]
+        },
+        {
+            "id": "wall",
+            "group": "decoration",
+            "tags": ["decoration"],
+            "path": "wall.svg"
+        },
+        {
+            "id": "grassblock",
+            "group": "decoration",
+            "tags": ["decoration"],
+            "path": "grassblock.svg"
+        },
+        {
+            "id": "table",
+            "group": "decoration",
+            "tags": ["decoration"],
+            "path": "table.svg"
         }
-    },
+    ],
     "shops": {
         "hwurst": {
             "id": "2",

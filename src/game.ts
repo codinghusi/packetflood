@@ -6,7 +6,7 @@ import { Event } from './object-loader';
 const game = new Engine('/res/resources.json');
 
 
-@game.group('computer')
+@game.forGroup('computer')
 class ComputerObject extends GameObject {
     toggle = false;
 
@@ -17,24 +17,26 @@ class ComputerObject extends GameObject {
         setInterval(() => {
             this.lighting.enabled = this.toggle;
             this.toggle = !this.toggle;
-
-            this.world.x += 1;
         }, 500);
     }
 
     @Event.Tick
     step() {
     }
-
-    @Event.On('connection')
-    onConnection(whatHappend: string) {
-        if (whatHappend === 'lost') {
-            console.log('internet connection lost!');
-        }
-    }
 }
 
 
 game.loaded().then(async () => {
-    const pi = new ComputerObject('rpi-v4');
+    game.createObject('grassblock', 0, 0);
+    game.createObject('grassblock', 0, 1);
+    game.createObject('grassblock', 0, 2);
+    game.createObject('grassblock', 1, 0);
+    game.createObject('grassblock', 1, 1);
+    game.createObject('grassblock', 1, 2);
+    game.createObject('grassblock', 2, 0);
+    game.createObject('grassblock', 2, 1);
+    game.createObject('grassblock', 2, 2);
+
+    game.createObject('table', 1, 1, 1);
+    game.createObject('rpi-v4', 1, 1, 2);
 });
