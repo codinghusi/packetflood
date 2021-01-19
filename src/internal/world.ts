@@ -67,7 +67,8 @@ export class WorldInstance {
 
 
     private updateCoordinates() {
-        const xOffset = this.config.worldSize.x / 2 - this.y + this.rotationOffset.x + 1;
+        // FIXME: why do we need offsets +4? (depends on worldSize, but how calculate that?)
+        const xOffset = this.config.worldSize.x / 2 - this.y + this.rotationOffset.x + 4;
         const yOffset = -this.z * 2 + this.x + this.rotationOffset.y + 1;
         this.gameObject.x = this.scaleUpCoordinates(this.x, xOffset, 1/2);
         this.gameObject.y = this.scaleUpCoordinates(this.y, yOffset, 1/4);
