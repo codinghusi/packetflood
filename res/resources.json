@@ -49,6 +49,12 @@
             "path": "grassblock.svg"
         },
         {
+            "id": "floor",
+            "group": "decoration",
+            "tags": ["decoration"],
+            "path": "floor.svg"
+        },
+        {
             "id": "table",
             "group": "decoration",
             "tags": ["decoration"],
