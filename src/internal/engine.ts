@@ -17,7 +17,7 @@ export class Engine extends EventEmitter {
     public resources: KeyValue<Resource>;
     public worldConfig: WorldConfig;
     protected objects = new Map<string, GameObjectConstructor>();
-    protected defaultObject = class extends GameObject {}
+    protected defaultObject = class extends GameObject { }
 
     constructor(protected resourcePath: string, worldSize: Vec2, blockSize: number) {
         super();

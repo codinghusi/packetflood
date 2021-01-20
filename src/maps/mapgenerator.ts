@@ -12,16 +12,15 @@ export function generateMap(worldSize: Vec2, roomSize: number) {
     }
 
     // Room with Walls
-    const xOffset = Math.round((worldSize.width - roomSize) / 2);
-    const yOffset = Math.round((worldSize.height - roomSize) / 2);
-    for (let x = 0; x < roomSize; ++x) {
-        game.createInstance('wall', xOffset + x, yOffset)
-            .world.fakeRotate(90);
-        game.createInstance('wall', xOffset + x, yOffset + roomSize)
-            .world.fakeRotate(270);
+    const xOffset = Math.round((worldSize.width - roomSize) / 2) - 1;
+    const yOffset = Math.round((worldSize.height - roomSize) / 2) - 1;
+    for (let x = 0; x <= roomSize; ++x) {
+        game.createInstance('wall', xOffset + x, yOffset, 1)
+            .world.fakeRotate(0);
+            
     }
-    for (let y = 0; y < roomSize; ++y) {
-        game.createInstance('wall', xOffset, yOffset + y);
-        game.createInstance('wall', xOffset + roomSize, yOffset + y);
+    for (let y = 0; y <= roomSize; ++y) {
+        game.createInstance('wall', xOffset, yOffset + y, 1)
+            .world.fakeRotate(90);
     }
 }
